@@ -1,0 +1,24 @@
+\documentclass{ctexart}
+\usepackage{amsmath, mathrsfs, amsfonts}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+
+% library
+
+\begin{document}
+
+\begin{figure}[htp]
+    \centering
+    \begin{circuitikz}[european]
+        \draw (0,4) to[battery2] (0,0)--(3,0) to[cute open switch] (3,2) to[R=$R$] (3,4)--(0,4);
+        \draw (1.5,0) to[rmeter,t=V,*-*] (1.5,4);
+
+    \end{circuitikz}
+
+    \caption{<caption>}
+    \label{<label>}
+\end{figure}
+
+
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass{ctexart}
+\usepackage{amsmath, mathrsfs, amsfonts}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tkz-base,tkz-euclide}    % 这个库可以不加分号
+
+% library
+
+\begin{document}
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoints{-2.5/0/B,2.5/0/C,-1.5/3/A,1.5/3/D,0/1.5/O}
+        \tkzDefMidPoint(A,B) \tkzGetPoint{E}
+        \tkzDefMidPoint(C,D) \tkzGetPoint{F}
+        \tkzDrawPolygon(A,B,C,D)
+        \draw (B)--(F)node[right]{$F$};
+        \draw (C)--(E)node[left]{$E$};
+        \tkzAutoLabelPoints[center=O](A,B,C,D)
+
+    \end{tikzpicture}
+
+    \caption{<caption>}
+    \label{<label>}
+\end{figure}
+
+
+\end{document}
